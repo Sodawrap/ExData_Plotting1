@@ -19,7 +19,7 @@ with(rdata, {
   lines(Sub_metering_2~Datetime,col='Red')
   lines(Sub_metering_3~Datetime,col='Blue')
 })
-legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, 
+legend("topright", col=c("black", "red", "blue"), lty=1, lwd=1, 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 ## save as png
