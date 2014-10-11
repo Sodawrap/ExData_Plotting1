@@ -12,10 +12,10 @@ rm(DSFull)
 datetime <- paste(as.Date(rdata$Date), rdata$Time)
 rdata$Datetime <- as.POSIXct(datetime)
 
+png("plot1.png",width=480,height=480) 
+
 ## Create required histogram
 hist(rdata$Global_active_power, main="Global Active Power", 
      xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
 
-## save as png
-dev.copy(png, file="plot1.png", height=480, width=480)
 dev.off()

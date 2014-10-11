@@ -12,10 +12,10 @@ rm(DSFull)
 datetime <- paste(as.Date(rdata$Date), rdata$Time)
 rdata$Datetime <- as.POSIXct(datetime)
 
+png("plot2.png",width=480,height=480) 
+
 ## Create plot
 plot(data$Global_active_power~rdata$Datetime, type="l",
      ylab="Global Active Power (kilowatts)", xlab="")
 
-## save as png
-dev.copy(png, file="plot2.png", height=480, width=480)
 dev.off()
